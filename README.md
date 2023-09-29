@@ -1,2 +1,2 @@
 # bockmaker_simulator
-bockmaker_simulator
+chat-GPTで適当に作った
