@@ -1,0 +1,45 @@
+body {
+  background-color: #e8e8e8; /* 薄いグレー */
+}
+
+/* rewardRecommendationを表示する部分のテキストサイズを小さめに */
+#rewardRecommendation {
+  font-size: 0.75rem !important;
+}
+/* simulationMessageを表示する部分のテキストを太字に、サイズを大きめに */
+#simulationMessage {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#simulationResultsTable {
+  display: none;
+}
+
+/* レスポンシブ対応: スマートフォン表示時のスタイル */
+@media only screen and (max-width: 600px) {
+  body {
+      font-size: 14px;  /* ベースとなるフォントサイズを小さくする */
+      padding: 10px;    /* パディングを追加してコンテンツが端にくっつかないようにする */
+  }
+
+  /* 入力フィールドやボタンのサイズを少し大きくする */
+  input, button, select {
+      font-size: 1rem;
+  }
+}
+
+/* テーブルを枠で囲う */
+table {
+  border-collapse: collapse;  /* 隣接するセルの境界線を結合 */
+  width: 100%;               /* テーブルの幅を100%に */
+}
+
+table, th, td {
+  border: 1px solid black;   /* テーブルとセルすべてに境界線を追加 */
+}
+
+th, td {
+  padding: 8px;              /* セルの内側にパディングを追加 */
+  text-align: left;          /* 左揃えにする */
+}

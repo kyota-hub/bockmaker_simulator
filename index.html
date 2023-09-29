@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ブックメーカーシュミレーター</title>
+</head>
+
+<body>
+    <h1>ブックメーカーシミュレーター</h1>
+    <div>
+        <p>ブックメーカーでフラットベットを繰り返した場合の資金推移をシュミレートします。
+        </p>
+    </div>
+    <label for="betType">ベットタイプ:</label>
+    <select id="betType">
+        <option value="single">シングルベット</option>
+        <option value="multi">マルチベット</option>
+    </select><br><br>
+
+    <label for="initialPoints">初期資金(max:10000000):</label>
+    <input type="number" id="initialPoints" min="0" max="10000000"><br><br>
+
+    <label for="betAmount">1回ごとのベット額(max:10000000):</label>
+    <input type="number" id="betAmount" min="0" max="10000000"><br><br>
+
+    <label for="numGames" class="multiOnly">何試合の組み合わせでベットするか(max:50):</label>
+    <input type="number" id="numGames" class="multiOnly" min="0" max="50"><br class="multiOnly"><br class="multiOnly">
+
+    <label for="predictedAccuracy">1試合ごとの的中確率(0-100%):</label>
+    <input type="number" id="predictedAccuracy"><br><br>
+
+    <label for="rewardPoints">的中時のオッズ(例:1.67):</label>
+    <input type="number" id="rewardPoints" min="0">
+    <div id="rewardRecommendation"></div><br>
+
+    <label for="simulationCount">何回シミュレーションを行うか(max:10000):</label>
+    <input type="number" id="simulationCount" min="0" max="10000"><br><br>
+
+    <label for="goalPoints">目標額:</label>
+    <input type="number" id="goalPoints" min="0"><br><br>
+
+    <div id="simulationMessage"></div><br>
+    <button id="runSimulationButton">実行</button>
+
+    <table id="simulationResultsTable">
+        <thead>
+            <tr>
+                <th>試行回数</th>
+                <th id="hitsHeader">何試合的中したか</th>
+                <th id="resultHeader" style="display: none;">結果</th>
+                <th>資金増減</th>
+                <th>現在の資金</th>
+            </tr>
+        </thead>
+        <tbody id="simulationResults">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
