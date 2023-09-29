@@ -14,6 +14,8 @@
     <div>
         <p>ブックメーカーでフラットベットを繰り返した場合の資金推移をシミュレーションします。
         </p>
+        <p>※全て半角数字で入力してください。
+        </p>
     </div>
     <label for="betType">ベットタイプ:</label>
     <select id="betType">
@@ -27,17 +29,17 @@
     <label for="betAmount">1回ごとのベット額(max:10000000):</label>
     <input type="number" id="betAmount" min="0" max="10000000"><br><br>
 
-    <label for="numGames" class="multiOnly">何試合の組み合わせでベットするか(max:50):</label>
+    <label for="numGames" class="multiOnly">マルチベットの組み合わせ試合数(max:50):</label>
     <input type="number" id="numGames" class="multiOnly" min="0" max="50"><br class="multiOnly"><br class="multiOnly">
 
-    <label for="predictedAccuracy">1試合ごとの的中確率(0-100%):</label>
+    <label for="predictedAccuracy">1試合ごとの平均的中確率(0-100%):</label>
     <input type="number" id="predictedAccuracy"><br><br>
 
-    <label for="rewardPoints">的中時のオッズ(例:1.67):</label>
+    <label for="rewardPoints">的中時の勝利オッズ(例:1.67):</label>
     <input type="number" id="rewardPoints" min="0">
     <div id="rewardRecommendation"></div><br>
 
-    <label for="simulationCount">何回シミュレーションを行うか(max:10000):</label>
+    <label for="simulationCount">試行回数(max:10000):</label>
     <input type="number" id="simulationCount" min="0" max="10000"><br><br>
 
     <label for="goalPoints">目標額:</label>
@@ -52,7 +54,7 @@
                 <th>試行回数</th>
                 <th id="hitsHeader">何試合的中したか</th>
                 <th id="resultHeader" style="display: none;">結果</th>
-                <th>資金増減</th>
+                <th>資金の増減</th>
                 <th>現在の資金</th>
             </tr>
         </thead>
